@@ -1,0 +1,36 @@
+
+
+# PEP518: https://www.python.org/dev/peps/pep-0518/
+
+# Projects that accepts pyprojecttoml: https://github.com/carlosperate/awesome-pyproject
+
+
+# [tool.pip]
+# https://pip.pypa.io/en/stable/topics/configuration/
+# file: $HOME$\pip\pip.ini
+
+# https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html
+[tool.black]
+line-length = 120
+target-version = ['py38']
+include = '\.pyi?$'
+
+# https://mypy.readthedocs.io/en/latest/config_file.html#using-a-pyproject-toml-file
+# https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+
+# https://flake8.pycqa.org/en/latest/user/configuration.html
+[flake8]
+ignore = "E203"
+max-line-length = 120
+max-complexity = 10
+hang-closing = true
+
+# https://pycqa.github.io/isort/docs/configuration/config_files/
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = ["src", "src/test"]
