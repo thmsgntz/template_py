@@ -22,13 +22,6 @@ python_version = "3.8"
 warn_return_any = true
 warn_unused_configs = true
 
-# https://flake8.pycqa.org/en/latest/user/configuration.html
-[flake8]
-ignore = "E203"
-max-line-length = 120
-max-complexity = 10
-hang-closing = true
-
 # https://pycqa.github.io/isort/docs/configuration/config_files/
 [tool.isort]
 profile = "black"

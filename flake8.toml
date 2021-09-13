@@ -1,0 +1,15 @@
+# flake8 configuration
+# isolated from other tools configuration (pyproject.toml), because the "ignore" fild is not parsed by other tools
+# https://flake8.pycqa.org/en/latest/user/configuration.html
+
+# ignoring errors (to match Black or PEP8):
+# W503 line break before binary operator
+# E203 whitespace before ':'
+# E501 line too long
+# W503 line break before binary operator
+
+
+[flake8]
+ignore=E203,E501,W503
+max-line-length = 120
+max-complexity = 10
